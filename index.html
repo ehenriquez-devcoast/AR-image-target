@@ -29,22 +29,27 @@
         <!-- Camara -->
         <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
 
-        <!-- TARGETS -->
+        <!-- ============================ TARGETS ============================ -->
+
+        <!-- CALCIO -->
         <a-entity mindar-image-target="targetIndex: 0">
           <a-plane src="#marco-calcio" position="0 0 0" height="0.552" width="1" rotation="0 0 0"></a-plane>
           <a-gltf-model rotation="0 0 0 " position="0 0 0.1" scale="0.005 0.005 0.005" src="#avatarModel" animation="property: position; to: 0 0.1 0.1; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate">
         </a-entity>
 
+        <!-- MULTIVIT -->
         <a-entity mindar-image-target="targetIndex: 1">
             <a-plane src="#marco-multivit" position="0 0 0" height="0.552" width="1" rotation="0 0 0"></a-plane>
             <a-gltf-model rotation="30 0 0 " position="0 0 0.1" scale="0.010 0.010 0.010" src="#avatarModel" animation="property: position; to: 0 0.1 0.1; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate">
         </a-entity>
 
+        <!-- COMPLEJO B -->
         <a-entity mindar-image-target="targetIndex: 2">
             <a-plane src="#marco-complejob" position="0 0 0" height="0.552" width="1" rotation="0 0 0"></a-plane>
             <a-gltf-model rotation="-30 0 0 " position="0 0 0.1" scale="0.020 0.020 0.020" src="#avatarModel" animation="property: position; to: 0 0.1 0.1; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate">
         </a-entity>
       </a-scene>
+      <!-- =================================================================== -->
     </body>
 
   </html>
