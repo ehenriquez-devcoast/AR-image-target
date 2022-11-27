@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function() {
     target.addEventListener("targetFound", event => {
         console.log("target found");
         console.log(event)
-        arSystem.stop();
+        arSystem.pause(true);
     });
 
 	// detect target lost
