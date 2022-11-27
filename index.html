@@ -4,6 +4,7 @@
       <script src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.5/dist/mindar-image.prod.js"></script>
       <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
       <script src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.5/dist/mindar-image-aframe.prod.js"></script>
+      <script src="./scripts/detect-target.js"></script>
     </head>
 
     <body>
@@ -33,7 +34,7 @@
         <!-- ============================ TARGETS ============================ -->
 
         <!-- CALCIO -->
-        <a-entity mindar-image-target="targetIndex: 0">
+        <a-entity id="calcio" mindar-image-target="targetIndex: 0">
           <a-image src="#marco-calcio" position="0 1 0" height="0.552" width="1" rotation="0 0 0"></a-image>
           <a-gltf-model rotation="0 0 0 " position="0 0 0.1" scale="0.005 0.005 0.005" src="#avatarModel" animation="property: position; to: 0 0.1 0.1; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate">
         </a-entity>
