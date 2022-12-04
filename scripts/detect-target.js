@@ -1,7 +1,18 @@
 document.addEventListener("DOMContentLoaded", function() {
+    
 	const sceneEl = document.querySelector('a-scene');
 	const arSystem = sceneEl.systems["mindar-image-system"];
-	const target = document.querySelector('#calcio');
+
+	const calcioTarget = document.querySelector('#calcio-target');
+	const multivitTarget = document.querySelector('#multivit-target');
+	const complejobTarget = document.querySelector('#complejob-target');
+    
+	const calciofrasco = document.querySelector('#calcio-frasco');
+	const multivitfrasco = document.querySelector('#multivit-frasco');
+	const complejobfrasco = document.querySelector('#complejob-frasco');
+
+    /** ======================================================= */
+
 	// const exampleTargetLink = document.querySelector('#example-target-link');
 
 	// const compatibilityOverlay = document.querySelector("#example-compatibility-overlay");
@@ -31,11 +42,68 @@ document.addEventListener("DOMContentLoaded", function() {
     // });
 
 	// detect target found
-    target.addEventListener("targetFound", event => {
-        console.log("target found");
+    calcioTarget.addEventListener("targetFound", event => {
+        console.log("target calcio found");
         console.log(event)
         arSystem.pause(true);
     });
+
+    
+    multivitTarget.addEventListener("targetFound", event => {
+        console.log("target multivit found");
+        console.log(event)
+        arSystem.pause(true);
+    });
+
+    
+    complejobTarget.addEventListener("targetFound", event => {
+        console.log("target complejoB found");
+        console.log(event)
+        arSystem.pause(true);
+    });
+    /** ======================================================= */
+
+
+    // Detect frasco click
+    calciofrasco.addEventListener("click", event => {
+        console.log("frasco calcio click");
+        console.log(event)
+        calciofrasco.setAttribute('animation', {
+            property: 'rotation',
+            to: '1 0 0',
+            easing: 'easeInOutQuad',
+            dur: 1000,
+            loop: true,
+            dir: 'alternate'
+        })
+    });
+
+    multivitfrasco.addEventListener("click", event => {
+        console.log("frasco multivit click");
+        console.log(event)
+        multivitfrasco.setAttribute('animation', {
+            property: 'rotation',
+            to: '1 0 0',
+            easing: 'easeInOutQuad',
+            dur: 1000,
+            loop: true,
+            dir: 'alternate'
+        })
+    });
+
+    complejobfrasco.addEventListener("click", event => {
+        console.log("frasco complejob click");
+        console.log(event)
+        complejobfrasco.setAttribute('animation', {
+            property: 'rotation',
+            to: '1 0 0',
+            easing: 'easeInOutQuad',
+            dur: 1000,
+            loop: true,
+            dir: 'alternate'
+        })
+    });
+    /** ======================================================= */
 
 	// detect target lost
     // exampleTarget.addEventListener("targetLost", event => {
