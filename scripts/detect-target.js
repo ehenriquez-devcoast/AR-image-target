@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-    
+
 	const sceneEl = document.querySelector('a-scene');
 	const arSystem = sceneEl.systems["mindar-image-system"];
 
@@ -56,11 +56,11 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     
-    complejobTarget.addEventListener("targetFound", event => {
-        console.log("target complejoB found");
-        console.log(event)
-        arSystem.pause(true);
-    });
+    // complejobTarget.addEventListener("targetFound", event => {
+    //     console.log("target complejoB found");
+    //     console.log(event)
+    //     arSystem.pause(true);
+    // });
     /** ======================================================= */
 
 
