@@ -18,6 +18,7 @@ AFRAME.registerComponent('tap-frasco', {
             // })
         
             // MOSTRAR DATOS
+            alert(this.data.frasco)
             setTimeout(() => {
                 if (this.data.frasco === '#multivit-frasco') {
                 // MOSTRAR COMBINACION
