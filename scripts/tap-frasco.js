@@ -29,6 +29,7 @@ AFRAME.registerComponent('tap-frasco', {
                         loop: true,
                         dir: 'alternate'
                     })
+                    alert('multivit touch')
                 } 
             }, 500)
     

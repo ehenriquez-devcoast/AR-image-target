@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function() {
     multivitTarget.addEventListener("targetFound", event => {
         console.log("target multivit found");
         console.log(event)
-        arSystem.pause(true);
+        // arSystem.pause(true);
     });
 
     
@@ -65,44 +65,44 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
     // Detect frasco click
-    calciofrasco.addEventListener("click", event => {
-        console.log("frasco calcio click");
-        console.log(event)
-        calciofrasco.setAttribute('animation', {
-            property: 'rotation',
-            to: '1 0 0',
-            easing: 'easeInOutQuad',
-            dur: 1000,
-            loop: true,
-            dir: 'alternate'
-        })
-    });
+    // calciofrasco.addEventListener("click", event => {
+    //     console.log("frasco calcio click");
+    //     console.log(event)
+    //     calciofrasco.setAttribute('animation', {
+    //         property: 'rotation',
+    //         to: '1 0 0',
+    //         easing: 'easeInOutQuad',
+    //         dur: 1000,
+    //         loop: true,
+    //         dir: 'alternate'
+    //     })
+    // });
 
-    multivitfrasco.addEventListener("click", event => {
-        console.log("frasco multivit click");
-        console.log(event)
-        multivitfrasco.setAttribute('animation', {
-            property: 'rotation',
-            to: '1 0 0',
-            easing: 'easeInOutQuad',
-            dur: 1000,
-            loop: true,
-            dir: 'alternate'
-        })
-    });
+    // multivitfrasco.addEventListener("click", event => {
+    //     console.log("frasco multivit click");
+    //     console.log(event)
+    //     multivitfrasco.setAttribute('animation', {
+    //         property: 'rotation',
+    //         to: '1 0 0',
+    //         easing: 'easeInOutQuad',
+    //         dur: 1000,
+    //         loop: true,
+    //         dir: 'alternate'
+    //     })
+    // });
 
-    complejobfrasco.addEventListener("click", event => {
-        console.log("frasco complejob click");
-        console.log(event)
-        complejobfrasco.setAttribute('animation', {
-            property: 'rotation',
-            to: '1 0 0',
-            easing: 'easeInOutQuad',
-            dur: 1000,
-            loop: true,
-            dir: 'alternate'
-        })
-    });
+    // complejobfrasco.addEventListener("click", event => {
+    //     console.log("frasco complejob click");
+    //     console.log(event)
+    //     complejobfrasco.setAttribute('animation', {
+    //         property: 'rotation',
+    //         to: '1 0 0',
+    //         easing: 'easeInOutQuad',
+    //         dur: 1000,
+    //         loop: true,
+    //         dir: 'alternate'
+    //     })
+    // });
     /** ======================================================= */
 
 	// detect target lost
