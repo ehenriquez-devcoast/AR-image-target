@@ -21,13 +21,13 @@ AFRAME.registerComponent('tap-frasco', {
                 if (this.data.frasco === '#multivit-frasco') {
                 // MOSTRAR COMBINACION
                     alert(Frasco)
-                    Frasco.remove();
-                    // Frasco.setAttribute('animation', {
-                    //     property: 'scale',
-                    //     to: '0 0 0',
-                    //     easing: 'easeOutQuad',
-                    //     dur: 500,
-                    // })
+                    // Frasco.remove();
+                    Frasco.setAttribute('animation', {
+                        property: 'scale',
+                        to: '0 0 0',
+                        easing: 'easeOutQuad',
+                        dur: 500,
+                    })
                 } 
             }, 500)
     
