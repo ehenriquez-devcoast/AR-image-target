@@ -16,11 +16,11 @@ AFRAME.registerComponent('tap-frasco', {
             //     dur: 500,
             // })
         
+            alert(Frasco)
             // MOSTRAR DATOS
             setTimeout(() => {
                 if (this.data.frasco === '#multivit-frasco') {
                 // MOSTRAR COMBINACION
-                    alert(Frasco)
                     // Frasco.remove();
                     Frasco.setAttribute('animation', {
                         property: 'scale',
