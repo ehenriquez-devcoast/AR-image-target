@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function() {
     multivitTarget.addEventListener("targetFound", event => {
         console.log("target multivit found");
         console.log(event)
-        // arSystem.pause(true);
+        arSystem.pause(true);
     });
 
     

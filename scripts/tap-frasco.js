@@ -18,19 +18,15 @@ AFRAME.registerComponent('tap-frasco', {
             // })
         
             // MOSTRAR DATOS
-            alert(this.data.frasco)
             setTimeout(() => {
                 if (this.data.frasco === '#multivit-frasco') {
                 // MOSTRAR COMBINACION
                     Frasco.setAttribute('animation', {
-                        property: 'rotation',
-                        to: '1 0 0',
-                        easing: 'easeInOutQuad',
-                        dur: 1000,
-                        loop: true,
-                        dir: 'alternate'
+                        property: 'scale',
+                        to: '0 0 0',
+                        easing: 'easeOutQuad',
+                        dur: 500,
                     })
-                    alert('multivit touch')
                 } 
             }, 500)
     
