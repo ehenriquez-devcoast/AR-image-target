@@ -4,10 +4,9 @@ AFRAME.registerComponent('tap-frasco', {
         frasco: {default: '#multivit'},
     },
     init() {
+        const Frasco = document.getElementById(this.data.frasco)
     
         this.el.addEventListener('click', (event) => {
-    
-            const Frasco = document.getElementById(this.data.frasco)
             
             // OCULTAR OTROS
             // Frasco.setAttribute('animation', {
@@ -21,6 +20,7 @@ AFRAME.registerComponent('tap-frasco', {
             setTimeout(() => {
                 if (this.data.frasco === '#multivit-frasco') {
                 // MOSTRAR COMBINACION
+                    alert(Frasco)
                     Frasco.remove();
                     // Frasco.setAttribute('animation', {
                     //     property: 'scale',
