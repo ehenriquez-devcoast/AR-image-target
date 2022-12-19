@@ -16,7 +16,7 @@ AFRAME.registerComponent('tap-frasco', {
             //     dur: 500,
             // })
         
-            alert(Frasco.toString())
+            alert(Frasco.attributes)
             // MOSTRAR DATOS
             setTimeout(() => {
                 if (this.data.frasco === '#multivit-frasco') {
