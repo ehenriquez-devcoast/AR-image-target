@@ -7,9 +7,9 @@ document.addEventListener("DOMContentLoaded", function() {
 	const multivitTarget = document.querySelector('#multivit-target');
 	const complejobTarget = document.querySelector('#complejob-target');
     
-	const calciofrasco = document.querySelector('#calcio-frasco');
-	const multivitfrasco = document.querySelector('#multivit-frasco');
-	const complejobfrasco = document.querySelector('#complejob-frasco');
+	// const calciofrasco = document.querySelector('#calcio-frasco');
+	// const multivitfrasco = document.querySelector('#multivit-frasco');
+	// const complejobfrasco = document.querySelector('#complejob-frasco');
 
     /** ======================================================= */
 
