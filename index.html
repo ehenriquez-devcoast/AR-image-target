@@ -2,17 +2,18 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <!-- <script src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.5/dist/mindar-image.prod.js"></script> -->
-        <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+        <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
         <!-- <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script> -->
-        <!-- <script src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.5/dist/mindar-image-aframe.prod.js"></script> -->
-        <!-- <script src="./scripts/detect-target.js"></script> -->
+        <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.0/dist/mindar-image-aframe.prod.js"></script>
+        <script src="./scripts/detect-target.js"></script>
         <script src="./scripts/tap-model.js"></script>
         <script src="./scripts/tap-frasco.js"></script>
     </head>
 
     <body>
         <!-- xrextras-gesture-detector mindar-image="imageTargetSrc: ./assets/targets.mind; filterMinCF: 1; filterBeta: 10000; warmupTolerance: 0; missTolerance: 0"  -->
-      <a-scene color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
+        <!-- inspector="url: https://cdn.jsdelivr.net/gh/aframevr/aframe-inspector@master/dist/aframe-inspector.min.js"  -->
+        <a-scene mindar-image="imageTargetSrc: ./assets/targets.mind; filterMinCF: 1; filterBeta: 10000; warmupTolerance: 0; missTolerance: 0" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
         
         <!-- Assets -->
         <a-assets>
@@ -99,7 +100,7 @@
         </a-assets>
   
         <!-- Camara -->
-        <a-camera position="0 1 3" look-controls="enabled: false"></a-camera>
+        <a-camera position="0 1 13" look-controls="enabled: false"></a-camera>
 
         <a-entity raycaster="objects: .clickable" cursor="rayOrigin: mouse;"></a-entity>
 
@@ -107,33 +108,34 @@
       
         <a-light type="ambient" intensity="0.7"></a-light>
 
-        <a-image id="close-btn" class="clickable" src="#close-circle" scale="0 0 0" material="color: red" position="4.5 3.5 -1"></a-image>
+        <a-image id="close-btn" class="clickable" src="#close-circle" scale="0 0 0" position="3 3 -1"></a-image>
 
         <!-- ============================ TARGETS ============================ -->
 
         <!-- CALCIO -->
         <!-- <a-image src="#marco-calcio" position="0 2.5 0" height="1" width="3" rotation="0 0 0"></a-image> -->
-        <a-entity id="calcio-frasco-0" class="clickable" tap-frasco="frasco: calcio-frasco-0; target:0;" rotation="0 0 0 " position="0 0 0.1" scale="3 3 1" gltf-model="#calcio-frasco-glb" animation="property: position; to: 0 0.1 0.1; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate"></a-entity>
+        
+        <!-- <a-entity id="calcio-frasco-0" class="clickable" tap-frasco="frasco: calcio-frasco-0; target:0;" rotation="0 0 0 " position="0 0 0.1" scale="3 3 1" gltf-model="#calcio-frasco-glb" animation="property: position; to: 0 0.1 0.1; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate"></a-entity>
         <a-entity id="multivit-frasco-0" class="clickable" tap-frasco="frasco: multivit-frasco-0; target:0;" rotation="0 0 0 " position="-1 0 0" scale="3 3 1" gltf-model="#multivit-frasco-glb" animation="property: position; to: -1 0.1 0; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate"></a-entity>
-        <a-entity id="complejob-frasco-0" class="clickable" tap-frasco="frasco: complejob-frasco-0; target:0;" rotation="0 0 0 " position="1 0 0" scale="3 3 1" gltf-model="#complejob-frasco-glb" animation="property: position; to: 1 0.1 0; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate"></a-entity>
-        <!-- <a-entity id="calcio-target" mindar-image-target="targetIndex: 0">
-        </a-entity> -->
+        <a-entity id="complejob-frasco-0" class="clickable" tap-frasco="frasco: complejob-frasco-0; target:0;" rotation="0 0 0 " position="1 0 0" scale="3 3 1" gltf-model="#complejob-frasco-glb" animation="property: position; to: 1 0.1 0; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate"></a-entity> -->
+        <a-entity id="calcio-target" mindar-image-target="targetIndex: 0">
+        </a-entity>
 
         <!-- MULTIVIT -->
-        <!-- <a-entity id="multivit-target" mindar-image-target="targetIndex: 1">
-            <a-image src="#marco-multivit" position="0 1 0" height="0.552" width="1" rotation="0 0 0"></a-image>
+        <a-entity id="multivit-target" mindar-image-target="targetIndex: 1">
+            <!-- <a-image src="#marco-multivit" position="0 1 0" height="0.552" width="1" rotation="0 0 0"></a-image>
             <a-entity id="multivit-frasco-1" class="clickable" tap-frasco="frasco: multivit-frasco-1; target:1;" rotation="0 0 0" position="0 0 0.1" scale="3 3 3" gltf-model="#multivit-frasco-glb" animation="property: position; to: 0 0.1 0.1; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate"></a-entity>
             <a-entity id="calcio-frasco-1" class="clickable" tap-frasco="frasco: calcio-frasco-1; target:1;" rotation="0 0 0 " position="-1 0 0" scale="3 3 3" gltf-model="#calcio-frasco-glb" animation="property: position; to: -1 0.1 0; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate"></a-entity>
-            <a-entity id="complejob-frasco-1" class="clickable" tap-frasco="frasco: complejob-frasco-1; target:1;" rotation="0 0 0 " position="1 0 0" scale="3 3 3" gltf-model="#complejob-frasco-glb" animation="property: position; to: 1 0.1 0; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate"></a-entity>
-        </a-entity> -->
+            <a-entity id="complejob-frasco-1" class="clickable" tap-frasco="frasco: complejob-frasco-1; target:1;" rotation="0 0 0 " position="1 0 0" scale="3 3 3" gltf-model="#complejob-frasco-glb" animation="property: position; to: 1 0.1 0; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate"></a-entity> -->
+        </a-entity>
 
         <!-- COMPLEJO B -->
-        <!-- <a-entity id="complejob-target" mindar-image-target="targetIndex: 2">
-            <a-image src="#marco-complejob" position="0 1 0" height="0.552" width="1" rotation="0 0 0"></a-image>
+        <a-entity id="complejob-target" mindar-image-target="targetIndex: 2">
+            <!-- <a-image src="#marco-complejob" position="0 1 0" height="0.552" width="1" rotation="0 0 0"></a-image>
             <a-entity id="complejob-frasco-2" class="clickable" tap-frasco="frasco: complejob-frasco-2; target:2;" rotation="0 0 0 " position="0 0 0.1" scale="3 3 3" gltf-model="#complejob-frasco-glb" animation="property: position; to: 0 0.1 0.1; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate"></a-entity>
             <a-entity id="calcio-frasco-2" class="clickable" tap-frasco="frasco: calcio-frasco-2; target:2;" rotation="0 0 0 " position="-1 0 0" scale="3 3 3" gltf-model="#calcio-frasco-glb" animation="property: position; to: -1 0.1 0; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate"></a-entity>
-            <a-entity id="multivit-frasco-2" class="clickable" tap-frasco="frasco: multivit-frasco-2; target:2;" rotation="0 0 0 " position="1 0 0" scale="3 3 3" gltf-model="#multivit-frasco-glb" animation="property: position; to: 0.5 0.1 0; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate"></a-entity>
-        </a-entity> -->
+            <a-entity id="multivit-frasco-2" class="clickable" tap-frasco="frasco: multivit-frasco-2; target:2;" rotation="0 0 0 " position="1 0 0" scale="3 3 3" gltf-model="#multivit-frasco-glb" animation="property: position; to: 0.5 0.1 0; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate"></a-entity> -->
+        </a-entity>
       </a-scene>
       <!-- =================================================================== -->
         <script>
