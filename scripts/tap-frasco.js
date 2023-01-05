@@ -64,6 +64,9 @@ AFRAME.registerComponent('tap-frasco', {
                             easing: 'easeInQuad',
                             dur: 500,
                         });
+                        let closePos = new THREE.Vector3(0.9, 0.9, -1);
+                        closePos.unproject(this.el.sceneEl.camera)
+                        Close.setAttribute("position",closePos)
 
                          // Marco
                         let marco = document.createElement('a-image');
@@ -111,13 +114,24 @@ AFRAME.registerComponent('tap-frasco', {
 
                         sceneEl.appendChild(Rutina);
 
+                        // Crear Video
+                        let Video = document.createElement('a-video');
+        
+                        Video.setAttribute("position", "0 0 1")
+                        Video.setAttribute("width", "3")
+                        Video.setAttribute("scale", "0 0 0")
+                        Video.setAttribute("id", "#calcio-Video")
+                        Video.setAttribute("src", "#calcio-video")
+
+                        sceneEl.appendChild(Video);
+
 
 
                         // Combinacion
                         let combinacion = document.createElement('a-entity');
         
-                        combinacion.setAttribute("position", ".1 -1.7 0")
-                        combinacion.setAttribute("scale", "4 4 4")
+                        combinacion.setAttribute("position", "0.340 -2.615 0")
+                        combinacion.setAttribute("scale", "5 5 5")
                         combinacion.setAttribute("class", "clickable")
                         combinacion.setAttribute("gltf-model", "#calcio-combinacion-glb")
                         combinacion.setAttribute("tap-model", "boton: 1; video: #calcio-Video; combinacion: #calcio-Combinacion; capsulas: #calcio-Capsulas; rutina: #calcio-Rutina")
@@ -127,8 +141,8 @@ AFRAME.registerComponent('tap-frasco', {
                         // Capsulas
                         let capsulas = document.createElement('a-entity');
         
-                        capsulas.setAttribute("position", "-.4 -2.65 0")
-                        capsulas.setAttribute("scale", "4 4 4")
+                        capsulas.setAttribute("position", "-0.465 -3.565 0")
+                        capsulas.setAttribute("scale", "5 5 5")
                         capsulas.setAttribute("class", "clickable")
                         capsulas.setAttribute("gltf-model", "#calcio-capsulas-glb")
                         capsulas.setAttribute("tap-model", "boton: 2; video: #calcio-Video; combinacion: #calcio-Combinacion; capsulas: #calcio-Capsulas; rutina: #calcio-Rutina")
@@ -138,8 +152,8 @@ AFRAME.registerComponent('tap-frasco', {
                         // Rutina
                         let rutina = document.createElement('a-entity');
         
-                        rutina.setAttribute("position", "-.07 -2.6 0")
-                        rutina.setAttribute("scale", "4 4 4")
+                        rutina.setAttribute("position", "-0.070 -3.167 0")
+                        rutina.setAttribute("scale", "5 5 5")
                         rutina.setAttribute("class", "clickable")
                         rutina.setAttribute("gltf-model", "#calcio-rutina-glb")
                         rutina.setAttribute("tap-model", "boton: 3; video: #calcio-Video; combinacion: #calcio-Combinacion; capsulas: #calcio-Capsulas; rutina: #calcio-Rutina")
@@ -149,11 +163,11 @@ AFRAME.registerComponent('tap-frasco', {
                         // Video
                         let video = document.createElement('a-entity');
         
-                        video.setAttribute("position", "-.03 -2.7 0")
-                        video.setAttribute("scale", "4 4 4")
+                        video.setAttribute("position", "0.023 -3.179 0")
+                        video.setAttribute("scale", "5 5 5")
                         video.setAttribute("class", "clickable")
                         video.setAttribute("gltf-model", "#calcio-video-glb")
-                        video.setAttribute("tap-model", "boton: 4; video: G4rPlmV_hjc; combinacion: #calcio-Combinacion; capsulas: #calcio-Capsulas; rutina: #calcio-Rutina")
+                        video.setAttribute("tap-model", "boton: 4; video: #calcio-Video; combinacion: #calcio-Combinacion; capsulas: #calcio-Capsulas; rutina: #calcio-Rutina")
 
                         sceneEl.appendChild(video);
 

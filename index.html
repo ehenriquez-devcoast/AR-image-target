@@ -1,9 +1,8 @@
 <html>
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <!-- <script src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.5/dist/mindar-image.prod.js"></script> -->
+        <meta name="apple-mobile-web-app-capable" content="yes">
         <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
-        <!-- <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script> -->
         <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.0/dist/mindar-image-aframe.prod.js"></script>
         <script src="./scripts/detect-target.js"></script>
         <script src="./scripts/tap-model.js"></script>
@@ -18,7 +17,6 @@
         <!-- Assets -->
         <a-assets>
 
-            <!-- <img id="card" src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.5/examples/image-tracking/assets/card-example/card.png" /> -->
             <a-asset-item id="avatarModel" src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.5/examples/image-tracking/assets/card-example/softmind/scene.gltf"></a-asset-item>
             
             <!-- BOTONES 3D -->
@@ -41,14 +39,15 @@
 
             <!-- MULTIVIT -->
             <img id="marco-multivit" src="./assets/images/Marco-Multivit.png">
-            <img id="multivit-thumb" src="./assets/images/multivit-thumb.jpg">
-            <!--<video
-            id="multivit-video"
-            crossorigin="anonymous"
-            webkit-playsinline playsinline
-            loop="false"
-            src="./assets/images/1920x1080-Preroll-Multivit.mp4">
-            </video>-->
+            <!-- <img id="multivit-thumb" src="./assets/images/multivit-thumb.jpg"> -->
+            <video
+                id="multivit-video"
+                crossorigin="anonymous"
+                webkit-playsinline playsinline
+                loop="false"
+                controls
+                src="./assets/images/1920x1080-Preroll-Multivit.mp4">
+            </video>
             <img id="multivit-combinacion" src="./assets/images/Multivit-Combinacion.png">
             <img id="multivit-capsulas" src="./assets/images/Multivit-Capsulas.png">
             <img id="multivit-rutina" src="./assets/images/Multivit-Rutina.png">
@@ -57,14 +56,15 @@
 
             <!-- CALCIO -->
             <img id="marco-calcio" src="./assets/images/Marco-Calcio.png">
-            <img id="calcio-thumb" src="./assets/images/calcio-thumb.jpg">
-            <!--<video
-            id="calcio-video"
-            crossorigin="anonymous"
-            webkit-playsinline playsinline
-            loop="false"
-            src="./assets/images/Preroll-CalcioProcaps.mp4">
-            </video>-->
+            <!-- <img id="calcio-thumb" src="./assets/images/calcio-thumb.jpg"> -->
+            <video
+                id="calcio-video"
+                crossorigin="anonymous"
+                webkit-playsinline playsinline
+                loop="false"
+                controls
+                src="./assets/images/Preroll-CalcioProcaps.mp4">
+            </video>
             <img id="calcio-combinacion" src="./assets/images/Calcio-Combinacion.png">
             <img id="calcio-capsulas" src="./assets/images/Calcio-Capsulas.png">
             <img id="calcio-rutina" src="./assets/images/Calcio-Rutina.png">
@@ -73,14 +73,15 @@
 
             <!-- COMPLEJO B -->
             <img id="marco-complejob" src="./assets/images/Marco-ComplejoB.png">
-            <img id="complejob-thumb" src="./assets/images/complejo-b-thumb.jpg">
-            <!--<video
-            id="complejob-video"
-            crossorigin="anonymous"
-            webkit-playsinline playsinline
-            loop="false"
-            src="./assets/images/Preroll-complejo-B_.mp4">
-            </video>-->
+            <!-- <img id="complejob-thumb" src="./assets/images/complejo-b-thumb.jpg"> -->
+            <video
+                id="complejob-video"
+                crossorigin="anonymous"
+                webkit-playsinline playsinline
+                loop="false"
+                controls
+                src="./assets/images/Preroll-complejo-B_.mp4">
+            </video>
             <img id="complejo-combinacion" src="./assets/images/Complejo-Combinacion.png">
             <img id="complejo-capsulas" src="./assets/images/Complejo-Capsulas.png">
             <img id="complejo-rutina" src="./assets/images/Complejo-Rutina.png">
@@ -108,7 +109,7 @@
       
         <a-light type="ambient" intensity="0.7"></a-light>
 
-        <a-image id="close-btn" class="clickable" src="#close-circle" scale="0 0 0" position="3 3 -1"></a-image>
+        <a-image id="close-btn" class="clickable" src="#close-circle" scale="0 0 0" position="2.5 3 -1"></a-image>
 
         <!-- ============================ TARGETS ============================ -->
 
@@ -137,12 +138,14 @@
             <a-entity id="multivit-frasco-2" class="clickable" tap-frasco="frasco: multivit-frasco-2; target:2;" rotation="0 0 0 " position="1 0 0" scale="3 3 3" gltf-model="#multivit-frasco-glb" animation="property: position; to: 0.5 0.1 0; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate"></a-entity> -->
         </a-entity>
       </a-scene>
+
       <!-- =================================================================== -->
         <script>
             document.querySelector('#close-btn').addEventListener('click', function() {
                 document.location.reload();
             });
         </script>
+
     </body>
 
     
