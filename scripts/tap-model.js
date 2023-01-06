@@ -107,7 +107,7 @@ AFRAME.registerComponent('tap-model', {
                 }
             }, 500)
     
-        }, { passive: false })
+        }, true)
     },
     
 });
