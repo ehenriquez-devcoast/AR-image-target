@@ -501,7 +501,7 @@ AFRAME.registerComponent('tap-frasco', {
                     Video.setAttribute("width", "2")
                     Video.setAttribute("scale", "0 0 0")
                     Video.setAttribute("id", "#complejo-Video")
-                    Video.setAttribute("src", "#complejo-video")
+                    Video.setAttribute("src", "#complejob-video")
 
                     sceneEl.appendChild(Video);
 
