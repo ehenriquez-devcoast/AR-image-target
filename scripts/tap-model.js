@@ -20,6 +20,7 @@ AFRAME.registerComponent('tap-model', {
             
             // OCULTAR OTROS
             if (this.data.boton) {
+                VideoAsset.stop();
                 Combinacion.setAttribute('animation', {
                     property: 'scale',
                     to: '0 0 0',
@@ -44,7 +45,6 @@ AFRAME.registerComponent('tap-model', {
                     easing: 'easeOutQuad',
                     dur: 500,
                 })
-                VideoAsset.stop()
             }
             
             // MOSTRAR DATOS
@@ -83,9 +83,7 @@ AFRAME.registerComponent('tap-model', {
                     dur: 800,
                     })
 
-                    setTimeout(() => {
-                        VideoAsset.play()
-                    },800)
+                    VideoAsset.play()
 
 
                     // console.log(this.data.video)
