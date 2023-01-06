@@ -1,6 +1,6 @@
 AFRAME.registerComponent('tap-model', {
     schema: {
-        boton: {default: '1'},
+        boton: {default: ''},
         video: {default: '#multi-Video'},
         combinacion: {default: '#multi-Combinacion'},
         capsulas: {default: '#multi-Capsulas'},
@@ -16,33 +16,34 @@ AFRAME.registerComponent('tap-model', {
             const Rutina = document.getElementById(this.data.rutina)
             const Video = document.getElementById(this.data.video)
             
-            // const Video = document.getElementById(this.data.video)
-        
             // OCULTAR OTROS
-            Combinacion.setAttribute('animation', {
-                property: 'scale',
-                to: '0 0 0',
-                easing: 'easeOutQuad',
-                dur: 500,
-            })
-            Capsulas.setAttribute('animation', {
-                property: 'scale',
-                to: '0 0 0',
-                easing: 'easeOutQuad',
-                dur: 500,
-            })
-            Rutina.setAttribute('animation', {
-                property: 'scale',
-                to: '0 0 0',
-                easing: 'easeOutQuad',
-                dur: 500,
-            })
-            Video.setAttribute('animation', {
-            property: 'scale',
-            to: '0 0 0',
-            easing: 'easeOutQuad',
-            dur: 500,
-            })
+            if (this.data.boton) {
+                //FIXME: se presiona 2 veces
+                Combinacion.setAttribute('animation', {
+                    property: 'scale',
+                    to: '0 0 0',
+                    easing: 'easeOutQuad',
+                    dur: 500,
+                })
+                Capsulas.setAttribute('animation', {
+                    property: 'scale',
+                    to: '0 0 0',
+                    easing: 'easeOutQuad',
+                    dur: 500,
+                })
+                Rutina.setAttribute('animation', {
+                    property: 'scale',
+                    to: '0 0 0',
+                    easing: 'easeOutQuad',
+                    dur: 500,
+                })
+                Video.setAttribute('animation', {
+                    property: 'scale',
+                    to: '0 0 0',
+                    easing: 'easeOutQuad',
+                    dur: 500,
+                })
+            }
             
             // MOSTRAR DATOS
             setTimeout(() => {
@@ -79,8 +80,8 @@ AFRAME.registerComponent('tap-model', {
                     easing: 'easeOutQuad',
                     dur: 800,
                     })
-                    let VideoAsset = document.getElementById("calcio-video")
-                    console.log(VideoAsset)
+
+                    let VideoAsset = document.getElementById((this.data.video.includes('multivit') ? 'multivit' : this.data.video.includes('calcio') ? 'calcio' : 'complejob' ) + '-video')
                     VideoAsset.play()
 
                     // console.log(this.data.video)
