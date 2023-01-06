@@ -83,7 +83,10 @@ AFRAME.registerComponent('tap-model', {
                     dur: 800,
                     })
 
-                    VideoAsset.play()
+                    setTimeout(() => {
+                        VideoAsset.play()
+                    },800)
+
 
                     // console.log(this.data.video)
                     // const myWindow = window.open(`https://www.youtube.com/embed/${this.data.video}?rel=0&autoplay=1`,
