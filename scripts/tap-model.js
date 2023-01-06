@@ -10,15 +10,16 @@ AFRAME.registerComponent('tap-model', {
         // CLICK EVENT
 
         this.el.addEventListener('click', (event) => {
+            event.preventDefault();
     
             const Combinacion = document.getElementById(this.data.combinacion)
             const Capsulas = document.getElementById(this.data.capsulas)
             const Rutina = document.getElementById(this.data.rutina)
             const Video = document.getElementById(this.data.video)
+            let VideoAsset = document.getElementById((this.data.video.includes('multivit') ? 'multivit' : this.data.video.includes('calcio') ? 'calcio' : 'complejob' ) + '-video')
             
             // OCULTAR OTROS
             if (this.data.boton) {
-                //FIXME: se presiona 2 veces
                 Combinacion.setAttribute('animation', {
                     property: 'scale',
                     to: '0 0 0',
@@ -43,6 +44,7 @@ AFRAME.registerComponent('tap-model', {
                     easing: 'easeOutQuad',
                     dur: 500,
                 })
+                VideoAsset.stop()
             }
             
             // MOSTRAR DATOS
@@ -81,7 +83,6 @@ AFRAME.registerComponent('tap-model', {
                     dur: 800,
                     })
 
-                    let VideoAsset = document.getElementById((this.data.video.includes('multivit') ? 'multivit' : this.data.video.includes('calcio') ? 'calcio' : 'complejob' ) + '-video')
                     VideoAsset.play()
 
                     // console.log(this.data.video)
