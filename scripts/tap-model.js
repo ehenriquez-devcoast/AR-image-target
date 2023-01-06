@@ -10,7 +10,7 @@ AFRAME.registerComponent('tap-model', {
         // CLICK EVENT
 
         this.el.addEventListener('click', (event) => {
-            event.preventDefault();
+            // event.preventDefault();
     
             const Combinacion = document.getElementById(this.data.combinacion)
             const Capsulas = document.getElementById(this.data.capsulas)
