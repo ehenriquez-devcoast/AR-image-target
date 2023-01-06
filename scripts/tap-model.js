@@ -17,6 +17,7 @@ AFRAME.registerComponent('tap-model', {
 
         this.el.addEventListener('click', (event) => {
             event.preventDefault();
+            event.stopImmediatePropagation();
             
             // OCULTAR OTROS
             if (this.data.boton) {
@@ -106,7 +107,7 @@ AFRAME.registerComponent('tap-model', {
                 }
             }, 500)
     
-        })
+        }, { passive: false })
     },
     
 });
