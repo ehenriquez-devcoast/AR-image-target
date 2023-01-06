@@ -8,19 +8,21 @@ AFRAME.registerComponent('tap-model', {
     },
     init() {
         // CLICK EVENT
+        const Combinacion = document.getElementById(this.data.combinacion)
+        const Capsulas = document.getElementById(this.data.capsulas)
+        const Rutina = document.getElementById(this.data.rutina)
+        const Video = document.getElementById(this.data.video)
+        let VideoAsset = document.getElementById((this.data.video.includes('multivit') ? 'multivit' : this.data.video.includes('calcio') ? 'calcio' : 'complejob' ) + '-video')
+        
 
         this.el.addEventListener('click', (event) => {
-            // event.preventDefault();
-    
-            const Combinacion = document.getElementById(this.data.combinacion)
-            const Capsulas = document.getElementById(this.data.capsulas)
-            const Rutina = document.getElementById(this.data.rutina)
-            const Video = document.getElementById(this.data.video)
-            let VideoAsset = document.getElementById((this.data.video.includes('multivit') ? 'multivit' : this.data.video.includes('calcio') ? 'calcio' : 'complejob' ) + '-video')
+            event.preventDefault();
             
             // OCULTAR OTROS
             if (this.data.boton) {
-                VideoAsset.stop();
+                VideoAsset.pause();
+                VideoAsset.currentTime = 0;
+
                 Combinacion.setAttribute('animation', {
                     property: 'scale',
                     to: '0 0 0',
