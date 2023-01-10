@@ -7,21 +7,25 @@ AFRAME.registerComponent('tap-model', {
         rutina: {default: '#multi-Rutina'},
     },
     init() {
-        // CLICK EVENT
         const Combinacion = document.getElementById(this.data.combinacion)
         const Capsulas = document.getElementById(this.data.capsulas)
         const Rutina = document.getElementById(this.data.rutina)
         const Video = document.getElementById(this.data.video)
         let VideoAsset = document.getElementById((this.data.video.includes('multivit') ? 'multivit' : this.data.video.includes('calcio') ? 'calcio' : 'complejob' ) + '-video')
+        let time = new Date().getTime();
         
-
+        // CLICK EVENT
         this.el.addEventListener('click', (event) => {
             event.stopImmediatePropagation();
             event.stopPropagation();
             event.preventDefault();
-            // console.log(event)
+            console.log(event)
+            console.log('time',time)
+            const newTime = new Date().getTime();
+            console.log('new time',newTime)
 
-            if (event.target.tagName == "A-ENTITY" && event.type == "click" && (event.target.id == ("boton-" + this.data.boton)) ){            
+            if ((newTime > (time + 1500) )  && event.target.tagName == "A-ENTITY" && event.type == "click" && (event.target.id == ("boton-" + this.data.boton)) ){            
+                time = newTime;
                 // OCULTAR OTROS
                 if (this.data.boton) {
                     VideoAsset.pause();
