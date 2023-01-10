@@ -213,7 +213,7 @@ AFRAME.registerComponent('tap-frasco', {
                 }, 500)
             }
             else if(this.data.frasco === ('calcio-frasco-' + this.data.target)){
-                console.log('clicked calcio')
+                // console.log('clicked calcio')
 
                 Frasco.setAttribute("class","notClickable")
                 Frasco.setAttribute("position","0 0 0")

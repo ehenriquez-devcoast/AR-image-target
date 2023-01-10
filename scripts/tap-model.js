@@ -19,10 +19,10 @@ AFRAME.registerComponent('tap-model', {
             event.stopImmediatePropagation();
             event.stopPropagation();
             event.preventDefault();
-            console.log(event)
-            console.log('time',time)
+            // console.log(event)
             const newTime = new Date().getTime();
-            console.log('new time',newTime)
+            // console.log('time',time)
+            // console.log('new time',newTime)
 
             if ((newTime > (time + 1500) )  && event.target.tagName == "A-ENTITY" && event.type == "click" && (event.target.id == ("boton-" + this.data.boton)) ){            
                 time = newTime;
