@@ -47,8 +47,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 	// detect target found
     calcioTarget.addEventListener("targetFound", event => {
-        console.log("target calcio found");
-        console.log(event)
+        // console.log(event)
         arSystem.pause(true);
 
         let CalcioFrasco = document.createElement('a-entity');
@@ -90,8 +89,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     
     multivitTarget.addEventListener("targetFound", event => {
-        console.log("target multivit found");
-        console.log(event)
+        // console.log(event)
         arSystem.pause(true);
 
         let CalcioFrasco = document.createElement('a-entity');
@@ -133,8 +131,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     
     complejobTarget.addEventListener("targetFound", event => {
-        console.log("target complejoB found");
-        console.log(event)
+        // console.log(event)
         arSystem.pause(true);
 
         let CalcioFrasco = document.createElement('a-entity');

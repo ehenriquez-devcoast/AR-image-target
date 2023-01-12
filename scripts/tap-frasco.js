@@ -118,8 +118,8 @@ AFRAME.registerComponent('tap-frasco', {
                     let combinacion = document.createElement('a-entity');
     
                     combinacion.setAttribute("id", "boton-1")
-                    combinacion.setAttribute("position", "-0.092 -2.873 0")
-                    combinacion.setAttribute("scale", "5 5 5")
+                    combinacion.setAttribute("position", "0.128 -3.803 0")
+                    combinacion.setAttribute("scale", "6 6 6")
                     combinacion.setAttribute("class", "clickable")
                     combinacion.setAttribute("gltf-model", "#multivit-combinacion-glb")
                     combinacion.setAttribute("tap-model", "boton: 1; video: #multivit-Video; combinacion: #multivit-Combinacion; capsulas: #multivit-Capsulas; rutina: #multivit-Rutina")
@@ -142,8 +142,8 @@ AFRAME.registerComponent('tap-frasco', {
                     let capsulas = document.createElement('a-entity');
     
                     capsulas.setAttribute("id", "boton-2")
-                    capsulas.setAttribute("position", "-0.092 -3.113 0")
-                    capsulas.setAttribute("scale", "5 5 5")
+                    capsulas.setAttribute("position", "-0.082 -3.943 0")
+                    capsulas.setAttribute("scale", "6 6 6")
                     capsulas.setAttribute("class", "clickable")
                     capsulas.setAttribute("gltf-model", "#multivit-capsulas-glb")
                     capsulas.setAttribute("tap-model", "boton: 2; video: #multivit-Video; combinacion: #multivit-Combinacion; capsulas: #multivit-Capsulas; rutina: #multivit-Rutina")
@@ -153,7 +153,7 @@ AFRAME.registerComponent('tap-frasco', {
                     // TEXT CAPSULAS
                     let textCapsulas = document.createElement('a-image');
                     
-                    textCapsulas.setAttribute("position", "-1.502 0.889 0")
+                    textCapsulas.setAttribute("position", "-1.803 0.889 0")
                     textCapsulas.setAttribute("width", "6")
                     textCapsulas.setAttribute("height", "1")
                     textCapsulas.setAttribute("scale", ".15 .15 .15")
@@ -166,8 +166,8 @@ AFRAME.registerComponent('tap-frasco', {
                     let rutina = document.createElement('a-entity');
     
                     rutina.setAttribute("id", "boton-3")
-                    rutina.setAttribute("position", "-0.070 -3.277 0")
-                    rutina.setAttribute("scale", "5 5 5")
+                    rutina.setAttribute("position", "-0.070 -3.977 0")
+                    rutina.setAttribute("scale", "6 6 6")
                     rutina.setAttribute("class", "clickable")
                     rutina.setAttribute("gltf-model", "#multivit-rutina-glb")
                     rutina.setAttribute("tap-model", "boton: 3; video: #multivit-Video; combinacion: #multivit-Combinacion; capsulas: #multivit-Capsulas; rutina: #multivit-Rutina")
@@ -177,7 +177,7 @@ AFRAME.registerComponent('tap-frasco', {
                     // TEXT RUTINA
                     let textRutina = document.createElement('a-image');
                 
-                    textRutina.setAttribute("position", "-1.523 0.164 0")
+                    textRutina.setAttribute("position", "-1.789 0.164 0")
                     textRutina.setAttribute("width", "6")
                     textRutina.setAttribute("height", "1")
                     textRutina.setAttribute("scale", ".15 .15 .15")
@@ -190,8 +190,8 @@ AFRAME.registerComponent('tap-frasco', {
                     let video = document.createElement('a-entity');
     
                     video.setAttribute("id", "boton-4")
-                    video.setAttribute("position", "0.023 -3.399 0")
-                    video.setAttribute("scale", "5 5 5")
+                    video.setAttribute("position", "0.203 -4.019 0")
+                    video.setAttribute("scale", "6 6 6")
                     video.setAttribute("class", "clickable")
                     video.setAttribute("gltf-model", "#multivit-video-glb")
                     video.setAttribute("tap-model", "boton: 4; video: #multivit-Video; combinacion: #multivit-Combinacion; capsulas: #multivit-Capsulas; rutina: #multivit-Rutina")
@@ -201,7 +201,7 @@ AFRAME.registerComponent('tap-frasco', {
                     // TEXT Video
                     let textVideo = document.createElement('a-image');
                 
-                    textVideo.setAttribute("position", "-1.044 -0.39 0")
+                    textVideo.setAttribute("position", "-1.072 -0.39 0")
                     textVideo.setAttribute("width", "6")
                     textVideo.setAttribute("height", "1")
                     textVideo.setAttribute("scale", ".15 .15 .15")
@@ -314,8 +314,8 @@ AFRAME.registerComponent('tap-frasco', {
                     let combinacion = document.createElement('a-entity');
     
                     combinacion.setAttribute("id", "boton-1")
-                    combinacion.setAttribute("position", "0.340 -2.5 0")
-                    combinacion.setAttribute("scale", "5 5 5")
+                    combinacion.setAttribute("position", "0.610 -3.327 0")
+                    combinacion.setAttribute("scale", "6 6 6")
                     combinacion.setAttribute("class", "clickable")
                     combinacion.setAttribute("gltf-model", "#calcio-combinacion-glb")
                     combinacion.setAttribute("tap-model", "boton: 1; video: #calcio-Video; combinacion: #calcio-Combinacion; capsulas: #calcio-Capsulas; rutina: #calcio-Rutina")
@@ -338,8 +338,8 @@ AFRAME.registerComponent('tap-frasco', {
                     let capsulas = document.createElement('a-entity');
     
                     capsulas.setAttribute("id", "boton-2")
-                    capsulas.setAttribute("position", "-0.465 -3.565 0")
-                    capsulas.setAttribute("scale", "5 5 5")
+                    capsulas.setAttribute("position", "-0.609 -4.408 0")
+                    capsulas.setAttribute("scale", "6 6 6")
                     capsulas.setAttribute("class", "clickable")
                     capsulas.setAttribute("gltf-model", "#calcio-capsulas-glb")
                     capsulas.setAttribute("tap-model", "boton: 2; video: #calcio-Video; combinacion: #calcio-Combinacion; capsulas: #calcio-Capsulas; rutina: #calcio-Rutina")
@@ -349,7 +349,7 @@ AFRAME.registerComponent('tap-frasco', {
                     // TEXT CAPSULAS
                     let textCapsulas = document.createElement('a-image');
                     
-                    textCapsulas.setAttribute("position", "-1.502 0.889 0")
+                    textCapsulas.setAttribute("position", "-1.847 0.889 0")
                     textCapsulas.setAttribute("width", "6")
                     textCapsulas.setAttribute("height", "1")
                     textCapsulas.setAttribute("scale", ".15 .15 .15")
@@ -362,8 +362,8 @@ AFRAME.registerComponent('tap-frasco', {
                     let rutina = document.createElement('a-entity');
     
                     rutina.setAttribute("id", "boton-3")
-                    rutina.setAttribute("position", "-0.070 -3.277 0")
-                    rutina.setAttribute("scale", "5 5 5")
+                    rutina.setAttribute("position", "-0.123 -4.029 0")
+                    rutina.setAttribute("scale", "6 6 6")
                     rutina.setAttribute("class", "clickable")
                     rutina.setAttribute("gltf-model", "#calcio-rutina-glb")
                     rutina.setAttribute("tap-model", "boton: 3; video: #calcio-Video; combinacion: #calcio-Combinacion; capsulas: #calcio-Capsulas; rutina: #calcio-Rutina")
@@ -373,7 +373,7 @@ AFRAME.registerComponent('tap-frasco', {
                     // TEXT RUTINA
                     let textRutina = document.createElement('a-image');
                 
-                    textRutina.setAttribute("position", "-1.523 0.164 0")
+                    textRutina.setAttribute("position", "-1.888 0.097 0")
                     textRutina.setAttribute("width", "6")
                     textRutina.setAttribute("height", "1")
                     textRutina.setAttribute("scale", ".15 .15 .15")
@@ -386,8 +386,8 @@ AFRAME.registerComponent('tap-frasco', {
                     let video = document.createElement('a-entity');
     
                     video.setAttribute("id", "boton-4")
-                    video.setAttribute("position", "0.023 -3.399 0")
-                    video.setAttribute("scale", "5 5 5")
+                    video.setAttribute("position", "0.202 -3.999 0")
+                    video.setAttribute("scale", "6 6 6")
                     video.setAttribute("class", "clickable")
                     video.setAttribute("gltf-model", "#calcio-video-glb")
                     video.setAttribute("tap-model", "boton: 4; video: #calcio-Video; combinacion: #calcio-Combinacion; capsulas: #calcio-Capsulas; rutina: #calcio-Rutina")
@@ -511,8 +511,8 @@ AFRAME.registerComponent('tap-frasco', {
                     let combinacion = document.createElement('a-entity');
     
                     combinacion.setAttribute("id", "boton-1")
-                    combinacion.setAttribute("position", "-0.092 -2.873 0")
-                    combinacion.setAttribute("scale", "5 5 5")
+                    combinacion.setAttribute("position", "0.098 -3.813 0")
+                    combinacion.setAttribute("scale", "6 6 6")
                     combinacion.setAttribute("class", "clickable")
                     combinacion.setAttribute("gltf-model", "#complejo-combinacion-glb")
                     combinacion.setAttribute("tap-model", "boton: 1; video: #complejo-Video; combinacion: #complejo-Combinacion; capsulas: #complejo-Capsulas; rutina: #complejo-Rutina")
@@ -535,8 +535,8 @@ AFRAME.registerComponent('tap-frasco', {
                     let capsulas = document.createElement('a-entity');
     
                     capsulas.setAttribute("id", "boton-2")
-                    capsulas.setAttribute("position", "-0.092 -3.113 0")
-                    capsulas.setAttribute("scale", "5 5 5")
+                    capsulas.setAttribute("position", "-0.072 -3.943 0")
+                    capsulas.setAttribute("scale", "6 6 6")
                     capsulas.setAttribute("class", "clickable")
                     capsulas.setAttribute("gltf-model", "#complejo-capsulas-glb")
                     capsulas.setAttribute("tap-model", "boton: 2; video: #complejo-Video; combinacion: #complejo-Combinacion; capsulas: #complejo-Capsulas; rutina: #complejo-Rutina")
@@ -546,7 +546,7 @@ AFRAME.registerComponent('tap-frasco', {
                     // TEXT CAPSULAS
                     let textCapsulas = document.createElement('a-image');
                     
-                    textCapsulas.setAttribute("position", "-1.502 0.889 0")
+                    textCapsulas.setAttribute("position", "-1.803 0.889 0")
                     textCapsulas.setAttribute("width", "6")
                     textCapsulas.setAttribute("height", "1")
                     textCapsulas.setAttribute("scale", ".15 .15 .15")
@@ -559,8 +559,8 @@ AFRAME.registerComponent('tap-frasco', {
                     let rutina = document.createElement('a-entity');
     
                     rutina.setAttribute("id", "boton-3")
-                    rutina.setAttribute("position", "-0.070 -3.277 0")
-                    rutina.setAttribute("scale", "5 5 5")
+                    rutina.setAttribute("position", "-0.070 -3.967 0")
+                    rutina.setAttribute("scale", "6 6 6")
                     rutina.setAttribute("class", "clickable")
                     rutina.setAttribute("gltf-model", "#complejo-rutina-glb")
                     rutina.setAttribute("tap-model", "boton: 3; video: #complejo-Video; combinacion: #complejo-Combinacion; capsulas: #complejo-Capsulas; rutina: #complejo-Rutina")
@@ -570,7 +570,7 @@ AFRAME.registerComponent('tap-frasco', {
                     // TEXT RUTINA
                     let textRutina = document.createElement('a-image');
                 
-                    textRutina.setAttribute("position", "-1.523 0.164 0")
+                    textRutina.setAttribute("position", "-1.806 0.164 0")
                     textRutina.setAttribute("width", "6")
                     textRutina.setAttribute("height", "1")
                     textRutina.setAttribute("scale", ".15 .15 .15")
@@ -583,8 +583,8 @@ AFRAME.registerComponent('tap-frasco', {
                     let video = document.createElement('a-entity');
     
                     video.setAttribute("id", "boton-4")
-                    video.setAttribute("position", "0.023 -3.399 0")
-                    video.setAttribute("scale", "5 5 5")
+                    video.setAttribute("position", "0.183 -4.009 0")
+                    video.setAttribute("scale", "6 6 6")
                     video.setAttribute("class", "clickable")
                     video.setAttribute("gltf-model", "#complejo-video-glb")
                     video.setAttribute("tap-model", "boton: 4; video: #complejo-Video; combinacion: #complejo-Combinacion; capsulas: #complejo-Capsulas; rutina: #complejo-Rutina")
@@ -594,7 +594,7 @@ AFRAME.registerComponent('tap-frasco', {
                     // TEXT Video
                     let textVideo = document.createElement('a-image');
                 
-                    textVideo.setAttribute("position", "-1.044 -0.39 0")
+                    textVideo.setAttribute("position", "-1.097 -0.39 0")
                     textVideo.setAttribute("width", "6")
                     textVideo.setAttribute("height", "1")
                     textVideo.setAttribute("scale", ".15 .15 .15")
